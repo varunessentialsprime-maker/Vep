@@ -17,10 +17,6 @@ rel="stylesheet">
 
 <style>
 
-/* =========================================================
-   SZN 100 — GLOBAL
-========================================================= */
-
 :root {
     --black: #050505;
     --black-2: #0b0b0b;
@@ -744,6 +740,8 @@ body::before {
     font-size: 7px;
     letter-spacing: .15em;
     text-transform: uppercase;
+
+    z-index: 2;
 }
 
 .quick-add {
@@ -2229,10 +2227,14 @@ footer {
 
 /* =========================================================
    PRODUCT DATABASE
-   Replace the URLs with your REAL affiliate/product URLs.
+   OLD PRODUCTS + NEW DAY 03 PRODUCTS
 ========================================================= */
 
 const products = [
+
+    /* =========================
+       OLD PRODUCT 01
+    ========================= */
 
     {
         id: 1,
@@ -2245,6 +2247,11 @@ const products = [
         url: "YOUR_AFFILIATE_LINK_HERE"
     },
 
+
+    /* =========================
+       OLD PRODUCT 02
+    ========================= */
+
     {
         id: 2,
         name: "Essential Fit",
@@ -2255,6 +2262,11 @@ const products = [
         image: "1.png",
         url: "YOUR_AFFILIATE_LINK_HERE"
     },
+
+
+    /* =========================
+       OLD PRODUCT 03
+    ========================= */
 
     {
         id: 3,
@@ -2267,6 +2279,11 @@ const products = [
         url: "YOUR_AFFILIATE_LINK_HERE"
     },
 
+
+    /* =========================
+       OLD PRODUCT 04
+    ========================= */
+
     {
         id: 4,
         name: "Signature Pick",
@@ -2276,6 +2293,54 @@ const products = [
         tag: "DROP 001",
         image: "3.png",
         url: "YOUR_AFFILIATE_LINK_HERE"
+    },
+
+
+    /* =====================================================
+       NEW PRODUCT 05 — DAY 03 WATCH
+    ===================================================== */
+
+    {
+        id: 5,
+        name: "Classic Black Dial Stainless Steel Watch",
+        category: "accessories",
+        price: 369,
+        oldPrice: 0,
+        tag: "DAY 03 / ACCESSORIES",
+        image: "Watch.png",
+        url: "https://dl.flipkart.com/s/COw02pNNNN"
+    },
+
+
+    /* =====================================================
+       NEW PRODUCT 06 — DAY 03 SHIRT
+    ===================================================== */
+
+    {
+        id: 6,
+        name: "Beige Linen Shirt",
+        category: "style",
+        price: 388,
+        oldPrice: 0,
+        tag: "DAY 03 / STYLE",
+        image: "Shirt.png",
+        url: "https://dl.flipkart.com/s/dTHCPAuuuN"
+    },
+
+
+    /* =====================================================
+       NEW PRODUCT 07 — DAY 03 PANTS
+    ===================================================== */
+
+    {
+        id: 7,
+        name: "Bell-Bottom Pants — Similar Pick",
+        category: "style",
+        price: 470,
+        oldPrice: 0,
+        tag: "DAY 03 / STYLE",
+        image: "Pant.png",
+        url: "https://dl.flipkart.com/s/dTCqFauuuN"
     }
 
 ];
@@ -2344,9 +2409,15 @@ function renderProducts(filter = "all") {
 
                         ₹${product.price}
 
-                        <span class="product-old">
-                            ₹${product.oldPrice}
-                        </span>
+                        ${
+                            product.oldPrice > 0
+                            ? `
+                                <span class="product-old">
+                                    ₹${product.oldPrice}
+                                </span>
+                              `
+                            : ""
+                        }
 
                     </div>
 
@@ -2411,11 +2482,13 @@ function openProduct(id) {
         product.url &&
         !product.url.includes("YOUR_AFFILIATE")
     ) {
+
         window.open(
             product.url,
             "_blank",
             "noopener,noreferrer"
         );
+
     } else {
 
         alert(
@@ -2586,17 +2659,6 @@ document
 
             return;
         }
-
-        /*
-            Affiliate-store logic:
-
-            Because affiliate purchases happen
-            on the retailer's website, the checkout
-            button can redirect users to the selected
-            product page.
-
-            Here we open the first selected product.
-        */
 
         const product = cart[0];
 
@@ -2788,4 +2850,4 @@ window.addEventListener(
 </script>
 
 </body>
-   </html>
+           </html>
