@@ -407,60 +407,20 @@ body::before {
 
 .primary-btn,
 .secondary-btn {
-    min-height: 54px;
-    padding: 0 28px;
+    min-height: 48px;
+    padding: 0 24px;
 
-    border-radius: 999px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    line-height: 1;
+    border-radius: 100px;
 
     font-size: 10px;
     font-weight: 700;
 
-    letter-spacing: .17em;
+    letter-spacing: .15em;
     text-transform: uppercase;
 
-    white-space: nowrap;
-
     transition:
-        transform .3s cubic-bezier(.2,.7,.2,1),
-        background .3s ease,
-        border-color .3s ease,
-        box-shadow .3s ease;
-}
-
-
-/* PRIMARY BUTTON */
-
-.primary-btn {
-    background: var(--white);
-    color: #050505;
-}
-
-.primary-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(255,255,255,.10);
-}
-
-
-/* SECONDARY BUTTON */
-
-.secondary-btn {
-    border: 1px solid rgba(255,255,255,.16);
-    background: rgba(255,255,255,.025);
-    color: white;
-}
-
-.secondary-btn:hover {
-    transform: translateY(-3px);
-    background: rgba(255,255,255,.07);
-    border-color: rgba(255,255,255,.3);
-  }
+        transform .25s ease,
+        background .25s ease;
 }
 
 .primary-btn {
@@ -2273,84 +2233,49 @@ footer {
 ========================================================= */
 
 const products = [
-    { 
-        id: 5
-        name:"Classic Black Dial Stainless Steel Watch"
-        category:"accessories"
-        tag:"DAY 03 / ACCESSORIES"
-        price:"₹369" 
-        oldPrice:"1999"
-        badge:"TODAY'S DROP"
-        image:"Watch.png"
-        url:"https://dl.flipkart.com/s/COw02pNNNN"
-    },
-
-    {
-        id: 6
-        name:"Beige Linen Shirt"
-        category:"style"
-        tag:"DAY 03 / STYLE"
-        price:"₹388"
-        oldPrice:"1499"
-        badge:"TODAY'S DROP"
-        image:"Shirt.png"
-        url:"https://dl.flipkart.com/s/dTHCPAuuuN"
-    },
-
-    {
-        id: 7
-        name:"Bell-Bottom Pants — Similar Pick"
-        category:"style"
-        tag:"DAY 03 / STYLE"
-        price:"₹470"
-        oldPrice:"1199"
-        badge:"SIMILAR PRODUCT"
-        image:"Pant.png"
-        url:"https://dl.flipkart.com/s/dTCqFauuuN",note:"The original featured pant is currently unavailable. This link is a similar alternative and may differ slightly from the image."
-    },
 
     {
         id: 1,
         name: "Everyday Polo",
         category: "style",
-        price:298,
+        price: 799,
         oldPrice: 1299,
         tag: "FEATURED",
         image: "polo.png",
-        url: ""
+        url: "YOUR_AFFILIATE_LINK_HERE"
     },
 
     {
         id: 2,
         name: "Essential Fit",
         category: "style",
-        price: 308,
+        price: 999,
         oldPrice: 1499,
         tag: "STYLE",
         image: "1.png",
-        url: "https://dl.flipkart.com/s/Ff49h1uuuN"
+        url: "YOUR_AFFILIATE_LINK_HERE"
     },
 
     {
         id: 3,
         name: "Daily Essential",
         category: "grooming",
-        price: 261,
+        price: 599,
         oldPrice: 899,
         tag: "GROOMING",
         image: "2.png",
-        url: "https://dl.flipkart.com/s/FfdbOkuuuN"
+        url: "YOUR_AFFILIATE_LINK_HERE"
     },
 
     {
         id: 4,
         name: "Signature Pick",
         category: "accessories",
-        price: 358,
+        price: 699,
         oldPrice: 999,
         tag: "DROP 001",
         image: "3.png",
-        url: "https://dl.flipkart.com/s/XcdVDqNNNN"
+        url: "YOUR_AFFILIATE_LINK_HERE"
     }
 
 ];
@@ -2863,4 +2788,4 @@ window.addEventListener(
 </script>
 
 </body>
-</html>
+   </html>
